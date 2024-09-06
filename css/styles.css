@@ -1,0 +1,612 @@
+@import url('https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap');
+@import "reset.css";
+
+:root {
+    --primary-color: rgb(34, 45, 67);
+    --secondary-color: rgb(76, 175, 223);
+    --accentuated-color: rgb(255, 149, 0);
+    --background-color: rgb(240, 240, 240);
+    --box-color: rgb(184, 184, 184);
+    --text-color: rgb(60, 60, 60);
+    --secondaty-text-color: rgb(120, 120, 120);
+}
+
+html, body {
+    font-family: 'SUSE', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+/* Header */
+
+header {
+    width: 100%;
+    text-align: center;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 0;
+    padding: 2rem 0;
+}
+
+.header-title {
+    font-size: 1.2rem;
+    font-weight: 100;
+    padding: 3rem 0;
+}
+
+.header-title h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.separator {
+    width: 100px;
+    height: 1px;
+    background-color: white;
+    margin: 2rem auto;
+    display: block;
+}
+
+#logo {
+    width: 130px;
+    height: 100px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 5rem 0;
+}
+
+.navbar ul li {
+    margin: 0 1rem;
+}
+
+.btn-navbar {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 1.5rem;
+    background-color: var(--secondary-color);
+    padding: 0.5rem 1rem;
+    border: solid 1px var(--secondary-color);
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+.btn-navbar:hover {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--secondary-color);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Section introduction */
+
+#introduction {
+    color: white;
+    width: 70%;
+    margin: 0 auto 2rem auto;
+    padding: 5rem 5rem;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.title-introduction h3::before {
+    content: "« ";
+    color: var(--secondary-color);
+}
+
+.title-introduction h3::after {
+    content: " »";
+    color: var(--secondary-color);
+}
+
+.title-introduction h3 {
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+.title-introduction {
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.content-introdution {
+    align-items: center;
+}
+
+#profil {
+    border-radius: 20%;
+    width: auto;
+    height: auto;
+}
+
+.content-text a {
+    flex: 1;
+    text-align: justify;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+/* Section projects */
+
+#projets {
+    width: 100%;
+    color: var(--text-color);
+    margin: 0 auto;
+    padding: 5rem 5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.title-projet h3::before {
+    content: "« ";
+    color: var(--secondary-color);
+}
+
+.title-projet h3::after {
+    content: " »";
+    color: var(--secondary-color);
+}
+
+.title-projet {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.content-projet {
+    margin: 0;
+    padding: 0;
+}
+
+.second-title-projet {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 3rem;
+}
+
+.second-title-projet p {
+    text-align: center;
+}
+
+.projets-boxs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.projet {
+    width: 37%;
+    margin: 2rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    transition: all 0.3s;
+}
+
+.projet:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+    transform: scale(1.05);
+}
+
+.projet-picture {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 15px 15px 0 0;
+}
+
+.projet-picture img {
+    min-width: 100%;
+    height: auto;
+}
+
+.projet-text {
+    text-align: center;
+    padding: 1rem;
+}
+
+.projet-text h4 {
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+
+.projet-text p {
+    font-size: 1.2rem;
+    font-weight: 100;
+}
+
+@media (max-width: 1024px) {
+    .projet {
+        flex: 1 1 calc(50% - 2rem); /* 2 colonnes pour les écrans moyens */
+    }
+}
+
+@media (max-width: 768px) {
+    .projet {
+        flex: 1 1 calc(100% - 2rem); /* 1 colonne pour les petits écrans */
+    }
+}
+
+
+/* Section contact */
+
+#contact {
+    width: 70%;
+    color: white;
+    margin: 0 auto 6rem auto;
+    padding: 5rem 5rem;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+.title-contact h3::before {
+    content: "« ";
+    color: var(--secondary-color);
+}
+
+.title-contact h3::after {
+    content: " »";
+    color: var(--secondary-color);
+}
+
+.title-contact {
+    text-transform: uppercase;
+    text-align: left;
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+}
+
+.text-contact {
+    margin: 0;
+    padding: 0;
+}
+
+.text-contact a {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+
+/* FIRSTPROJECT PAGE */
+
+#introduction-project {
+    color: white;
+    width: 70%;
+    margin: 0 auto 2rem auto;
+    padding: 5rem 5rem;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+#introduction-project h3::before {
+    content: "« ";
+    color: var(--secondary-color);
+}
+
+#introduction-project h3::after {
+    content: " »";
+    color: var(--secondary-color);
+}
+
+#introduction-project h3 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+#introduction-project .img-csmfl-rpg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+}
+
+#introduction-project .img-csmfl-rpg img {
+    width: 40%;
+    height: auto;
+    overflow: hidden;
+    margin: 4rem auto;
+    border-radius: 20px;
+}
+
+
+#production {
+    width: 80%;
+    color: var(--text-color);
+    text-align: center;
+    margin: 0 auto;
+    padding: 5rem 5rem;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+#production h3::before {
+    content: "« ";
+    color: var(--secondary-color);
+}
+
+#production h3::after {
+    content: " »";
+    color: var(--secondary-color);
+}
+
+#production h3 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+#rpg_video {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+}
+
+/* Footer */
+
+footer {
+    width: 100%;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-content {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.footer-content p {
+    font-size: 1.2rem;
+    font-weight: 100;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer-links li {
+    display: inline;
+}
+
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+    }
+
+    .header-title {
+        font-size: 1rem;
+        padding: 2rem 0;
+    }
+
+    .header-title h1 {
+        font-size: 2rem;
+    }
+
+    .separator {
+        width: 80px;
+        margin: 1.5rem auto;
+    }
+
+    #logo {
+        width: 100px;
+        height: 80px;
+    }
+
+    .navbar ul {
+        margin: 3rem;
+    }
+
+    .btn-navbar {
+        font-size: 1.2rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    #introduction {
+        padding: 3rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    #profil {
+        width: 250px;
+        height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .title-introduction {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .content-introdution {
+        font-size: 1.2rem;
+    }
+
+    #projets {
+        padding: 3rem 2rem;
+        font-size: 1.5rem;
+        width: 100%;
+    }
+
+    .title-projet {
+        font-size: 2rem;
+    }
+
+    .second-title-projet {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+
+    .projet-text h4 {
+        font-size: 1.2rem;
+    }
+
+    .projet-text p {
+        font-size: 1rem;
+    }
+
+    .content-projet {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+    }
+
+    #contact {
+        padding: 3rem 2rem;
+        font-size: 1.5rem;
+    }
+
+    .title-contact {
+        font-size: 2rem;
+    }
+
+    .text-contact {
+        font-size: 1.2rem;
+        overflow: hidden;
+    }
+
+    .footer-content p {
+        font-size: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 1rem;
+    }
+}
+
+/* @media (max-width: 480px) {
+    .header-title {
+        font-size: 0.8rem;
+        padding: 1.5rem 0;
+    }
+
+    .header-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .separator {
+        width: 60px;
+        margin: 1rem auto;
+    }
+
+    #logo {
+        width: 80px;
+        height: 60px;
+    }
+
+    #introduction {
+        padding: 2rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    #profile {
+        width: 20px;
+        height: auto;
+    }
+
+    .title-introduction {
+        font-size: 1.5rem;
+    }
+
+    .content-introdution {
+        font-size: 1rem;
+    }
+
+    #projets {
+        padding: 2rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .title-projet {
+        font-size: 1.5rem;
+    }
+
+    .second-title-projet {
+        font-size: 1.2rem;
+    }
+
+    .projet-text h4 {
+        font-size: 1rem;
+    }
+
+    .projet-text p {
+        font-size: 0.8rem;
+    }
+
+    #contact {
+        padding: 2rem 1rem;
+        font-size: 1.2rem;
+    }
+
+    .title-contact {
+        font-size: 1.5rem;
+    }
+
+    .text-contact {
+        font-size: 1rem;
+    }
+
+    .footer-content p {
+        font-size: 0.8rem;
+    }
+
+    .footer-links a {
+        font-size: 0.8rem;
+    }
+} */
