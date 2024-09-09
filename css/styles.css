@@ -425,72 +425,30 @@ footer {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    header {
-        width: 100%;
-    }
+/* Responsive */
 
-    .header-title {
-        font-size: 1rem;
-        padding: 2rem 0;
+@media (max-width: 1024px) {
+    body {
+        font-size: 0.9rem;
     }
 
     .header-title h1 {
         font-size: 2rem;
     }
 
-    .separator {
-        width: 80px;
-        margin: 1.5rem auto;
-    }
-
-    #logo {
-        width: 100px;
-        height: 80px;
-    }
-
-    .navbar ul {
-        margin: 3rem;
-    }
-
     .btn-navbar {
         font-size: 1.2rem;
-        padding: 0.5rem 0.8rem;
     }
 
-    #introduction {
+    #introduction, #projets, #contact, #introduction-project, #production {
         padding: 3rem 2rem;
         font-size: 1.5rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    #profil {
-        width: 250px;
-        height: auto;
-        margin-bottom: 2rem;
-    }
-
-    .title-introduction {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    .content-introdution {
-        font-size: 1.2rem;
-    }
-
-    #projets {
-        padding: 3rem 2rem;
-        font-size: 1.5rem;
-        width: 100%;
-    }
-
-    .title-projet {
+    .title-introduction, .title-projet, .title-contact, #introduction-project h3, #production h3 {
         font-size: 2rem;
-    }
-
-    .second-title-projet {
-        font-size: 1.5rem;
-        margin-bottom: 2rem;
     }
 
     .projet-text h4 {
@@ -499,26 +457,6 @@ footer {
 
     .projet-text p {
         font-size: 1rem;
-    }
-
-    .content-projet {
-        margin: 0;
-        padding: 0;
-        width: 100%;
-    }
-
-    #contact {
-        padding: 3rem 2rem;
-        font-size: 1.5rem;
-    }
-
-    .title-contact {
-        font-size: 2rem;
-    }
-
-    .text-contact {
-        font-size: 1.2rem;
-        overflow: hidden;
     }
 
     .footer-content p {
@@ -530,55 +468,30 @@ footer {
     }
 }
 
-/* @media (max-width: 480px) {
-    .header-title {
+/* Ajustements pour les petits écrans */
+@media (max-width: 768px) {
+    body {
         font-size: 0.8rem;
-        padding: 1.5rem 0;
     }
 
     .header-title h1 {
         font-size: 1.5rem;
     }
 
-    .separator {
-        width: 60px;
-        margin: 1rem auto;
-    }
-
-    #logo {
-        width: 80px;
-        height: 60px;
-    }
-
-    #introduction {
-        padding: 2rem 1rem;
-        font-size: 1.2rem;
-    }
-
-    #profile {
-        width: 20px;
-        height: auto;
-    }
-
-    .title-introduction {
-        font-size: 1.5rem;
-    }
-
-    .content-introdution {
+    .btn-navbar {
         font-size: 1rem;
     }
 
-    #projets {
+    #introduction, #projets, #contact, #introduction-project, #production {
         padding: 2rem 1rem;
         font-size: 1.2rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
-    .title-projet {
+    .title-introduction, .title-projet, .title-contact, #introduction-project h3, #production h3 {
         font-size: 1.5rem;
-    }
-
-    .second-title-projet {
-        font-size: 1.2rem;
+        text-align: center;
     }
 
     .projet-text h4 {
@@ -589,17 +502,8 @@ footer {
         font-size: 0.8rem;
     }
 
-    #contact {
-        padding: 2rem 1rem;
-        font-size: 1.2rem;
-    }
-
-    .title-contact {
-        font-size: 1.5rem;
-    }
-
-    .text-contact {
-        font-size: 1rem;
+    .projet {
+        margin-bottom: 1rem;
     }
 
     .footer-content p {
@@ -609,4 +513,91 @@ footer {
     .footer-links a {
         font-size: 0.8rem;
     }
-} */
+}
+
+/* Ajustements pour les très petits écrans */
+@media (max-width: 480px) {
+    body {
+        font-size: 0.7rem;
+    }
+
+    .header-title h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-title h2 {
+        font-size: 1.5rem;
+    }
+
+    #logo {
+        width: 100px;
+        height: 80px;
+    }
+
+    .btn-navbar {
+        font-size: 0.8rem;
+    }
+
+    #introduction, #contact, #introduction-project, #production {
+        padding: 3rem 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #introduction {
+        margin-bottom: 3rem;
+    }
+
+    #projets {
+        padding: 1rem 1rem;
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .projet {
+        margin-bottom: 1rem;
+    }
+
+    #profil {
+        display: none;
+    }
+
+    .title-introduction, .title-projet, .title-contact, #introduction-project h3, #production h3 {
+        font-size: 1.2rem;
+    }
+
+    .second-title-projet {
+        font-size: 1.2rem;
+    }
+
+    .projet-text h4 {
+        font-size: 0.8rem;
+    }
+
+    .projet-text p {
+        font-size: 0.7rem;
+    }
+
+    .projets-boxs:last-child {
+        margin-bottom: 3rem;
+    }
+
+    #contact {
+        margin-bottom: 3rem;
+    }
+
+    .footer-content p {
+        font-size: 0.7rem;
+        margin-bottom: 2rem;
+    }
+
+    .footer-links {
+        gap: 1rem;
+    }
+
+    .footer-links a {
+        font-size: 0.7rem;
+    }
+}
