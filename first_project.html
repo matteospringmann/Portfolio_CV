@@ -11,6 +11,26 @@
 <body>
     
     <header>
+        <div class="header-items">
+            <div class="logo-name">
+                <img class="navbar-logo" src="media/profil_picture.jpg" alt="epitech_logo" title="logo epitech">
+                <h1>Mattéo Springmann</h1>
+            </div>
+            <div class="navbar">
+                <a class="btn-navbar" href="index.html">Accueil</a>
+                <a class="btn-navbar" href="index.html#competences-section">Compétences</a>
+                <a class="btn-navbar" href="index.html#projets">Projets</a>
+                <a class="btn-navbar" href="index.html#offre">Offre</a>
+                <a class="btn-navbar" href="#contact">Contact</a>
+            </div>
+            <div class="navbar-contact">
+                <a href="#">Me contacter</a>
+            </div>
+        </div>
+    </header>
+
+     
+    <section id="devant-page">
         <div class="header-title">
             <h1>Mattéo Springmann</h1>
             <span class="separator"></span>
@@ -19,15 +39,7 @@
         <div class="header-logo">
             <img id="logo" src="media/epitech_logo.png" alt="epitech_logo" title="logo epitech">
         </div>
-    </header>
-
-    <nav class="navbar">
-        <ul>
-            <li><a class="btn-navbar" href="index.html">Accueil</a></li>
-            <li><a class="btn-navbar" href="index.html#projets">Projets</a></li>
-            <li><a class="btn-navbar" href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    </section>
 
     <section id="introduction-project">
         <h3>saverne_rpg</h3>
@@ -75,16 +87,74 @@
     </footer>
 
 </body>
-</html>
 
-<script>
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
+    <script>
+        // Sélectionne tous les boutons de la navbar
+        const navbarButtons = document.querySelectorAll('.navbar a');
 
-            document.querySelector(this.getAttribute('href')).scrollIntoView({
-                behavior: 'smooth'
+        // Ajoute un écouteur d'événement à chaque bouton
+        navbarButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                const targetId = button.getAttribute('href');
+                
+                // Vérifie si le lien est "index.html"
+                if (targetId !== "index.html" && targetId !== "index.html#competences-section"
+                    && targetId !== "index.html#projets" && targetId !== "index.html#offre") {
+                    e.preventDefault(); // Empêche le comportement par défaut du lien
+
+                    // Récupère la section vers laquelle le bouton pointe
+                    const targetSection = document.querySelector(targetId);
+
+                    // Si la section existe, elle défile avec animation fluide
+                    if (targetSection) {
+                        targetSection.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                }
             });
         });
-    });
-</script>
+    </script>
+
+
+    <script>
+        const navbar = document.querySelector('header'); // Sélection de l'élément navbar (header)
+
+        // Ajout d'un écouteur d'événement pour surveiller le défilement
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Si l'utilisateur a défilé de plus de 50 pixels
+                navbar.classList.add('transparent-navbar'); // Ajoute la classe pour la transparence
+            } else {
+                navbar.classList.remove('transparent-navbar'); // Retire la transparence quand on revient en haut
+            }
+        });
+    </script>
+
+    <script>
+        const btnCompetences = document.getElementById('btn-competences');
+        const btnExperiences = document.getElementById('btn-experiences');
+        const btnScholarship = document.getElementById('btn-scholarship');
+        const competencesSection = document.getElementById('competences-section');
+        const experiencesSection = document.getElementById('experiences-section');
+        const scholarshipSection = document.getElementById('scholarship-section');
+
+        btnCompetences.addEventListener('click', () => {
+            competencesSection.classList.remove('hidden');
+            experiencesSection.classList.add('hidden');
+            scholarshipSection.classList.add('hidden');
+        });
+
+        btnExperiences.addEventListener('click', () => {
+            experiencesSection.classList.remove('hidden');
+            competencesSection.classList.add('hidden');
+            scholarshipSection.classList.add('hidden');
+        });
+
+        btnScholarship.addEventListener('click', () => {
+            scholarshipSection.classList.remove('hidden');
+            competencesSection.classList.add('hidden');
+            experiencesSection.classList.add('hidden');
+        });
+    </script>
+
+</html>

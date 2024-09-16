@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/styles.css">
     <link rel="icon" type="image/png" href="media/epitech_logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width">
     <title>Mattéo Springmann | Développeur</title>
 </head>
 <body>
-     
+
     <header>
+        <div class="header-items">
+            <div class="logo-name">
+                <img class="navbar-logo" src="media/profil_picture.jpg" alt="epitech_logo" title="logo epitech">
+                <h1>Mattéo Springmann</h1>
+            </div>
+            <div class="navbar">
+                <a class="btn-navbar" href="#devant-page">Accueil</a>
+                <a class="btn-navbar" href="#competences-section">Compétences</a>
+                <a class="btn-navbar" href="#projets">Projets</a>
+                <a class="btn-navbar" href="#offre">Offre</a>
+                <a class="btn-navbar" href="#contact">Contact</a>
+            </div>
+            <div class="navbar-contact">
+                <a href="#">Me contacter</a>
+            </div>
+        </div>
+    </header>
+
+     
+    <section id="devant-page">
         <div class="header-title">
             <h1>Mattéo Springmann</h1>
             <span class="separator"></span>
@@ -19,16 +40,7 @@
         <div class="header-logo">
             <img id="logo" src="media/epitech_logo.png" alt="epitech_logo" title="logo epitech">
         </div>
-    </header>
-
-    <nav class="navbar">
-        <ul>
-            <li><a class="btn-navbar" href="#">Accueil</a></li>
-            <li><a class="btn-navbar" href="#projets">Projets</a></li>
-            <li><a class="btn-navbar" href="#offre">Offre</a></li>
-            <li><a class="btn-navbar" href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    </section>
 
     <section id="introduction">
         <div class="text-intro">
@@ -36,13 +48,129 @@
                 <h3>Bienvenue</h3>
             </div>
             <div class="content-introduction">
-                <div class="content-text">
-                    <p>Je m'appelle Mattéo Springmann, je suis étudiant en 2ème année à l'école d'informatique <a href="https://www.epitech.eu/ecole-informatique-strasbourg/">Epitech Strasbourg</a> dans le cadre du programme grande école 2028 (Ingénieur BAC +5) et également développeur junior spécialisé dans le front-end.</p>
+                <div class="content-introduction-left">
+                    <div class="content-image">
+                        <img id="profil" src="media/cv.png" alt="profil_picture" title="profil picture">
+                        <a href="#">Télécharger mon CV</a>
+                    </div>
+                </div>
+                <div class="content-introduction-right">
+                    <div class="quality-boxs">
+                        <div class="quality">
+                            <i class="fa-solid fa-palette"></i>
+                            <p>Créatif</p>
+                        </div>
+                        <div class="quality">
+                            <i class="fa-solid fa-battery-full"></i>
+                            <p>Autonome</p>
+                        </div>
+                        <div class="quality">
+                            <i class="fa-solid fa-heart"></i>
+                            <p>Passioné</p>
+                        </div>
+                    </div>
+                    <div class="content-text">
+                        <p>Je m'appelle Mattéo Springmann, je suis étudiant en 2ème année à l'école d'informatique <a href="https://www.epitech.eu/ecole-informatique-strasbourg/">Epitech Strasbourg</a> dans le cadre du programme grande école 2028 (Ingénieur BAC +5) et également développeur junior spécialisé dans le front-end.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <img id="profil" src="media/profil_picture.jpg" alt="profil_picture" title="profil picture">
     </section>
+
+    <section id="competences-experiences">
+        <div class="skills-title">
+            <h3>Compétences et Expériences</h3>
+        </div>
+        <div class="buttons">
+            <button id="btn-competences">Compétences</button>
+            <button id="btn-experiences">Expériences</button>
+            <button id="btn-scholarship">Scolarité</button>
+        </div>
+        
+        <!-- Logos de langages de programmation (affiché par défaut) -->
+        <div id="competences-section">
+            <h3>Mes compétences</h3>
+            <div class="logos">
+                <img class="img_skills" src="media/html_logo.png" alt="HTML">
+                <img class="img_skills" src="media/css_logo.png" alt="CSS">
+                <img class="img_skills" src="media/git_logo.png" alt="Git">
+                <img class="img_skills" src="media/python_logo.png" alt="Python">
+                <img class="img_skills" src="media/c_logo.png" alt="C">
+                <img class="img_skills fedora" src="media/fedora_logo.png" alt="Fedora Linux">
+                <!-- Ajoutez d'autres logos ici -->
+            </div>
+        </div>
+        
+        <!-- Parcours d'expériences (masqué par défaut) -->
+        <div id="experiences-section" class="hidden">
+            <h3>Mon parcours</h3>
+            <div class="experiences-boxs">
+                <div class="experience">
+                    <div class="year">
+                        <p>Décembre 2019</p>
+                    </div>
+                    <div class="work">
+                        <p>Stage de 3ème - collège</p>
+                        <a href="#">Hexagone Immobilier Saverne</a>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="year-work">
+                        <p>Août 2022 et Août 2024</p>
+                    </div>
+                    <div class="work">
+                        <p>Job d'été - Mairie de Wangenbourg</p>
+                        <a href="#">Agent technique communale</a>
+                    </div>
+                </div>
+                <div class="experience">
+                    <div class="year">
+                        <p>Août 2024 - now</p>
+                    </div>
+                    <div class="work">
+                        <p>Stage de deuxième années d'études</p>
+                        <a href="#">Développeur, Sogeti Schiltigheim</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="scholarship-section" class="hidden">
+            <h3>Ma scolarité</h3>
+            <div class="scholarship-boxs">
+                <div class="scholarship">
+                    <div class="year">
+                        <p>2016 - 2020</p>
+                    </div>
+                    <div class="school">
+                        <p>Brevet des collèges mention Très Bien</p>
+                        <a href="https://clg-pagnol-wasselonne.monbureaunumerique.fr/">Collège Marcel Pagnol - Wasselonne</a>
+                    </div>
+                </div>
+                <div class="scholarship">
+                    <div class="year">
+                        <p>2020 - 2023</p>
+                    </div>
+                    <div class="school">
+                        <p>Baccalauréat mention Assez Bien</p>
+                        <a href="https://www.hautbarr.net/">Lycée du Haut-Barr - Saverne</a>
+                    </div>             
+                </div>
+                <div class="scholarship">
+                    <div class="year">
+                        <p>2023 - now</p>
+                    </div>
+                    <div class="school">
+                        <p>Programme Grands Ecoles (PGE 2028)</p>
+                        <a href="https://www.epitech.eu/ecole-informatique-strasbourg/">Epitech Strasbourg</a>
+                    </div>             
+                </div>
+            </div>
+        </div>
+
+    </section>
+    
+    
 
     <section id="projets">
         <div class="title-projet">
@@ -65,7 +193,8 @@
                     </a>
                 </div>
                 <div class="projet">
-                    <a href="second_project.html">
+                    <!-- <a href="second_project.html"> -->
+                    <a href="incoming.html">
                         <div class="projet-picture">
                             <img id="projet2" src="media/rename.png" alt="projet2" title="projet2">
                         </div>
@@ -76,7 +205,8 @@
                     </a>
                 </div>
                 <div class="projet">
-                    <a href="third_project.html">
+                    <!-- <a href="third_project.html"> -->
+                    <a href="incoming.html">
                         <div class="projet-picture">
                             <img id="projet3" src="media/sokoban.png" alt="projet3" title="projet3">
                         </div>
@@ -87,13 +217,13 @@
                     </a>
                 </div>
                 <div class="projet">
-                    <a href="fourth_project.html">
+                    <a href="#">
                         <div class="projet-picture">
-                            <img id="projet4" src="media/illustration_4.jpg" alt="projet4" title="projet4">
+                            <img id="projet4" src="media/site.png" alt="projet4" title="projet4">
                         </div>
                         <div class="projet-text">
-                            <h4>Projet 4</h4>
-                            <p>Ceci est la description de mon projet 4</p>
+                            <h4>Portfolio</h4>
+                            <p>Le site sur lequel vous êtes actuellement !</p>
                         </div>
                     </a>
                 </div>
@@ -125,7 +255,7 @@
 
     <section id="offre">
         <div class="title-offre">
-            <h3>Offre</h3>
+            <h3>Travaillons ensemble !</h3>
         </div>
         <div class="content-offre">
             <div class="text-offre">
@@ -178,15 +308,14 @@
 
         <div class="content-contact">
             <div class="text-contact">
-                <p>Vous pouvez me contacter à l'adresse suivante : <a href="mailto:matteo.springmann@epitech.eu">matteo.springmann@epitech.eu</p>
+                <p>Vous pouvez me contacter à l'adresse suivante : <a href="mailto:matteo.springmann@epitech.eu">matteo.springmann@epitech.eu</a></p>
             </div>
         </div>
     </section>
     
     <footer>
         <div class="footer-content">
-            <p>&copy; 2024 Mattéo Springmann</p>
-
+            <p>Copyright 2022 All rights reserved to Mattéo SPRINGMANN</p>
             <ul class="footer-links">
                 <li><a href="https://www.epitech.eu" target="_blank">Epitech</a></li>
                 <li><a href="https://www.linkedin.com/in/matt%C3%A9o-springmann-353536301/" target="_blank">LinkedIn</a></li>
@@ -197,4 +326,70 @@
     </footer>
 
 </body>
+
+    <script>
+        // Sélectionne tous les boutons de la navbar
+        const navbarButtons = document.querySelectorAll('.navbar a');
+
+        // Ajoute un écouteur d'événement à chaque bouton
+        navbarButtons.forEach(button => {
+            button.addEventListener('click', (e) => {
+                e.preventDefault(); // Empêche le comportement par défaut du lien
+
+                // Récupère la section vers laquelle le bouton pointe
+                const targetId = button.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+
+                // Si la section existe, elle défile avec animation fluide
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+    <script>
+        const navbar = document.querySelector('header'); // Sélection de l'élément navbar (header)
+
+        // Ajout d'un écouteur d'événement pour surveiller le défilement
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) { // Si l'utilisateur a défilé de plus de 50 pixels
+                navbar.classList.add('transparent-navbar'); // Ajoute la classe pour la transparence
+            } else {
+                navbar.classList.remove('transparent-navbar'); // Retire la transparence quand on revient en haut
+            }
+        });
+    </script>
+
+    <script>
+        const btnCompetences = document.getElementById('btn-competences');
+        const btnExperiences = document.getElementById('btn-experiences');
+        const btnScholarship = document.getElementById('btn-scholarship');
+        const competencesSection = document.getElementById('competences-section');
+        const experiencesSection = document.getElementById('experiences-section');
+        const scholarshipSection = document.getElementById('scholarship-section');
+
+        btnCompetences.addEventListener('click', () => {
+            competencesSection.classList.remove('hidden');
+            experiencesSection.classList.add('hidden');
+            scholarshipSection.classList.add('hidden');
+        });
+
+        btnExperiences.addEventListener('click', () => {
+            experiencesSection.classList.remove('hidden');
+            competencesSection.classList.add('hidden');
+            scholarshipSection.classList.add('hidden');
+        });
+
+        btnScholarship.addEventListener('click', () => {
+            scholarshipSection.classList.remove('hidden');
+            competencesSection.classList.add('hidden');
+            experiencesSection.classList.add('hidden');
+        });
+    </script>
+
+
 </html>
