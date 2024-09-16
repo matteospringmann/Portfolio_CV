@@ -110,9 +110,9 @@ header {
 }
 
 .transparent-navbar {
-    background-color: rgba(255, 255, 255, 0.5); /* Couleur blanche avec 50% de transparence */
-    transition: background-color 0.3s ease; /* Transition fluide */
-    backdrop-filter: blur(10px); /* Flou gaussien */
+    background-color: rgba(255, 255, 255, 0.5);
+    transition: background-color 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 /* carte-visite */
@@ -157,8 +157,7 @@ header {
 #introduction {
     color: var(--primary-color);
     width: 70%;
-    margin: 0 auto 5rem auto;
-    padding: 5rem 5rem;
+    margin: 5rem auto 5rem auto;
     font-size: 2rem;
     /* background-color: var(--primary-color);
     border: 1px solid var(--primary-color);
