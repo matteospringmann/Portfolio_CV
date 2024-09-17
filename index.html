@@ -51,7 +51,7 @@
                 <div class="content-introduction-left">
                     <div class="content-image">
                         <img id="profil" src="media/cv.png" alt="profil_picture" title="profil picture">
-                        <a href="#">Télécharger mon CV</a>
+                        <a href="media/cv.pdf" download="matteo_springmann_cv.pdf">Télécharger mon CV</a>
                     </div>
                 </div>
                 <div class="content-introduction-right">
@@ -71,6 +71,7 @@
                     </div>
                     <div class="content-text">
                         <p>Je m'appelle Mattéo Springmann, je suis étudiant en 2ème année à l'école d'informatique <a href="https://www.epitech.eu/ecole-informatique-strasbourg/">Epitech Strasbourg</a> dans le cadre du programme grande école 2028 (Ingénieur BAC +5) et également développeur junior spécialisé dans le front-end.</p>
+                        <p>Ce Portfolio est l'occasion pour moi de mettre en pratique mes connaissances en front-end mais également de montrer plusieurs projets que j'ai pu réaliser, ainsi que de vous partagez mon parcours et même vous offrir mes services si necéssaires !</p>
                     </div>
                 </div>
             </div>
@@ -91,14 +92,50 @@
         <div id="competences-section">
             <h3>Mes compétences</h3>
             <div class="logos">
-                <img class="img_skills" src="media/html_logo.png" alt="HTML">
-                <img class="img_skills" src="media/css_logo.png" alt="CSS">
-                <img class="img_skills" src="media/git_logo.png" alt="Git">
-                <img class="img_skills" src="media/python_logo.png" alt="Python">
-                <img class="img_skills" src="media/c_logo.png" alt="C">
-                <img class="img_skills fedora" src="media/fedora_logo.png" alt="Fedora Linux">
-                <!-- Ajoutez d'autres logos ici -->
+                <div class="skill">
+                    <i class="fa-brands fa-html5"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                    <p>HTML</p>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-css3-alt"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p>CSS</p>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-git-alt"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                    <p>Git</p>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-python"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%;"></div>
+                    </div>
+                    <p>Python</p>
+                </div>
+                <div class="skill">
+                    <i class="fa-solid fa-c"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 70%;"></div>
+                    </div>
+                    <p>C</p>
+                </div>
+                <div class="skill">
+                    <i class="fa-brands fa-fedora"></i>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                    <p>Fedora Linux</p>
+                </div>
             </div>
+            <!-- Ajoutez d'autres compétences ici -->
         </div>
         
         <!-- Parcours d'expériences (masqué par défaut) -->
@@ -306,12 +343,61 @@
             <h3>Contact</h3>
         </div>
 
-        <div class="content-contact">
-            <div class="text-contact">
-                <p>Vous pouvez me contacter à l'adresse suivante : <a href="mailto:matteo.springmann@epitech.eu">matteo.springmann@epitech.eu</a></p>
+        <div class="contact-content">
+
+            <div class="contact-request">
+                <div class="contact-request-title">
+                    <h4>Vous avez une question ? Une opportunité ? Contacter moi pour en savoir plus !</h4>
+                </div>
+                <div class="mail-request">
+                    <div class="mail-top">
+                        <i class="fa-solid fa-at"></i>
+                        <p>E-mail</p>
+                    </div>
+                    <div class="mail-bottom">
+                        <a href="mailto:matteo.springmann@epitech.eu">Un mail par ici -></a>
+                    </div>
+                </div>
+                <div class="phone-request">
+                    <div class="phone-top">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Téléphone</p>
+                    </div>
+                    <div class="phone-bottom">
+                        <a href="tel:+330638119869">Un appel par ici -></a>
+                    </div>
+                </div>
             </div>
+            
+            <div class="contact-right-part">
+                <div class="contact-form">
+                    <form action="submit_form.php" method="POST" class="contact-form">
+                        <div class="name-form">
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+            
+                        <div class="email-form">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" placeholder="Votre mail" required>
+                        </div>
+            
+                        <div class="message-form">
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+    
+                        <div class="send-form">
+                            <button type="submit">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
+
     </section>
+    
     
     <footer>
         <div class="footer-content">
@@ -325,7 +411,7 @@
         </div>
     </footer>
 
-</body>
+    <!-- JAVASCRIPT -->
 
     <script>
         // Sélectionne tous les boutons de la navbar
@@ -390,6 +476,12 @@
             experiencesSection.classList.add('hidden');
         });
     </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+    <script src="js/animations.js"></script>
+
+</body>
 
 
 </html>

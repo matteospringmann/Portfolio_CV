@@ -22,4 +22,14 @@ img {
     height: auto;
 }
 
+/* Réinitialiser les styles par défaut des inputs et textareas */
+input, textarea {
+    border: none; /* Enlever les bordures */
+    outline: none; /* Enlever les contours */
+    background: none; /* Enlever l'arrière-plan */
+    box-shadow: none; /* Enlever les ombres */
+    padding: 0; /* Enlever le padding par défaut */
+    margin: 0; /* Enlever les marges par défaut */
+    resize: none; /* Empêcher le redimensionnement */
+}
 

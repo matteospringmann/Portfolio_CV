@@ -344,7 +344,7 @@ header {
 
 #competences-experiences {
     width: 60%;
-    margin: 0 auto;
+    margin: auto;
     text-align: center;
 }
 
@@ -386,6 +386,47 @@ header {
     font-size: 1.5rem;
     font-weight: 800;
     padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1 1 calc(33.33% - 2rem);
+    padding: 0 2rem;
+}
+
+.skill i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress {
+    height: 10px;
+    background-color: var(--secondary-color);
+    border-radius: 10px;
+}
+
+.skill p {
+    margin: 0;
+    font-size: 1rem;
+    text-align: center;
 }
 
 #experiences-section h3 {
@@ -485,26 +526,6 @@ header {
 
 .scholarship a:hover {
     text-decoration: underline;
-}
-
-.img_skills {
-    width: 250px;
-    height: 260px;
-}
-
-
-.img_skills:hover {
-    transform: scale(1.1);
-    transition: all 0.3s;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
-    border-radius: 20px;
-}
-
-.logos {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 2rem;
 }
 
 @media (max-width: 1440px) {
@@ -630,7 +651,7 @@ header {
 #offre {
     width: 100%;
     color: var(--text-color);
-    margin: 5rem auto 5rem auto;
+    margin: 5rem auto 0rem auto;
     font-size: 2rem;
 }
 
@@ -748,14 +769,10 @@ header {
 
 #contact {
     width: 70%;
-    color: white;
-    margin: 0 auto 6rem auto;
+    /* color: white; */
+    margin: auto;
     padding: 5rem 5rem;
     font-size: 2rem;
-    background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
 .title-contact h3::before {
@@ -770,21 +787,124 @@ header {
 
 .title-contact {
     text-transform: uppercase;
-    text-align: left;
+    text-align: center;
     font-size: 2.5rem;
     font-weight: 800;
     margin-bottom: 2rem;
 }
 
-.text-contact {
-    margin: 0;
-    padding: 0;
+.contact-content {
+    display: flex;
+    gap: 5rem;
 }
 
-.text-contact a {
-    text-decoration: none;
-    color: var(--secondary-color);
+.contact-request {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    font-size: 1.5rem;
 }
+
+.contact-request-title {
+    font-size: 1.5rem;
+}
+
+.mail-request {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.mail-top {
+    margin-bottom: 1rem;
+}
+
+.mail-bottom a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.mail-bottom a:hover {
+    text-decoration: underline;
+}
+
+.phone-request {
+    background-color: var(--secondary-color);
+    border-radius: 15px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.phone-top {
+    margin-bottom: 1rem;
+}
+
+.phone-bottom a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.phone-bottom a:hover {
+    text-decoration: underline;
+}
+
+.contact-right-part {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+}
+
+.name-form, .email-form, .message-form, .send-form {
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    gap: 0.5rem;
+}
+
+.name-form input,
+.email-form input,
+.message-form textarea {
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    background-color: var(--primary-color);
+    border: 3px solid var(--secondary-color);
+    padding: 1rem;
+    font-size: 1.2rem;
+}
+
+.send-form button {
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    border-radius: 15px;
+    padding: 1rem;
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    font-weight: 800;
+    transition: all 0.3s;
+}
+
+.send-form button:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+    scale: 0.95;
+    transition: all 0.3s;
+}
+
 
 /* Footer */
 
