@@ -57,7 +57,9 @@
     <section id="production">
         <h3>Démonstration</h3>
 
-        <video controls width="70%" id="rpg_video" src="media/rpg_pres.mp4"></video>
+        <div class="video-projet-rpg">
+            <video controls width="70%" id="rpg_video" src="media/rpg_pres.mp4"></video>
+        </div>
 
     </section>
 
@@ -66,11 +68,59 @@
             <h3>Contact</h3>
         </div>
 
-        <div class="content-contact">
-            <div class="text-contact">
-                <p>Vous pouvez me contacter à l'adresse suivante : <a href="mailto:matteo.springmann@epitech.eu">matteo.springmann@epitech.eu</p>
+        <div class="contact-content">
+
+            <div class="contact-request">
+                <div class="contact-request-title">
+                    <h4>Vous avez une question ? Une opportunité ? Contacter moi pour en savoir plus !</h4>
+                </div>
+                <div class="mail-request">
+                    <div class="mail-top">
+                        <i class="fa-solid fa-at"></i>
+                        <p>E-mail</p>
+                    </div>
+                    <div class="mail-bottom">
+                        <a href="mailto:matteo.springmann@epitech.eu">Un mail par ici -></a>
+                    </div>
+                </div>
+                <div class="phone-request">
+                    <div class="phone-top">
+                        <i class="fa-solid fa-phone"></i>
+                        <p>Téléphone</p>
+                    </div>
+                    <div class="phone-bottom">
+                        <a href="tel:+330638119869">Un appel par ici -></a>
+                    </div>
+                </div>
             </div>
+            
+            <div class="contact-right-part">
+                <div class="contact-form">
+                    <form action="submit_form.php" method="POST" class="contact-form">
+                        <div class="name-form">
+                            <label for="name">Nom :</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+            
+                        <div class="email-form">
+                            <label for="email">Email :</label>
+                            <input type="email" id="email" name="email" placeholder="Votre mail" required>
+                        </div>
+            
+                        <div class="message-form">
+                            <label for="message">Message :</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+                        </div>
+    
+                        <div class="send-form">
+                            <button type="submit">Envoyer</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
         </div>
+
     </section>
 
     <footer>
