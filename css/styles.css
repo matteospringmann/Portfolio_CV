@@ -159,10 +159,6 @@ header {
     width: 70%;
     margin: 5rem auto 5rem auto;
     font-size: 2rem;
-    /* background-color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    border-radius: 15px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5); */
 }
 
 .title-introduction h3::before {
@@ -609,7 +605,7 @@ header {
     background-color: white;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
-    transition: all 0.3s;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .projet:hover {
@@ -889,6 +885,7 @@ header {
     border: 3px solid var(--secondary-color);
     padding: 1rem;
     font-size: 1.2rem;
+    font-family: 'SUSE', sans-serif;
 }
 
 .send-form button {
@@ -1116,7 +1113,36 @@ footer {
 
 @media (max-width: 768px) {
     body {
+        margin: 0;
+        padding: 0;
         font-size: 0.8rem;
+    }
+
+    #devant-page {
+        margin-top: 0;
+    }
+
+    .header-items {
+        position: relative;
+        width: 100%;
+        background-color: red;
+        padding: 1rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo-name {
+        display: none;
+    }
+
+    .navbar-contact {
+        display: none;
+    }
+
+    .navbar {
+        display: none;
     }
 
     .header-title h1 {
@@ -1127,16 +1153,160 @@ footer {
         font-size: 1rem;
     }
 
-    #introduction, #projets, #contact, #introduction-project, #production {
-        padding: 2rem 1rem;
-        font-size: 1.2rem;
-        width: 90%;
-        margin: 0 auto;
+    #devant-page {
+        margin-bottom: 2rem;
     }
 
-    .title-introduction, .title-projet, .title-contact, #introduction-project h3, #production h3 {
-        font-size: 1.5rem;
+    #introduction {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-introduction h3 {
+        font-size: 2rem;
+    }
+
+    .content-introduction {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-introduction-right {
+        width: 100%;
+    }
+
+    .content-introduction-left {
+        width: 100%;
+    }
+
+    .content-image img {
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+
+    .content-text {
+        margin-bottom: -3rem;
+    }
+
+    .content-text p {
+        font-size: 1.2rem;
+    }
+
+    #competences-experiences {
+        width: 100%;
+        margin-bottom: 2rem;
+        margin: auto;
+        padding: auto;
+    }
+
+    .skills-title h3 {
+        font-size: 2rem;
         text-align: center;
+    }
+
+    .buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 1rem;
+        margin: auto;
+        padding: auto;
+        margin-left: 6px;
+    }
+
+    .buttons button {
+        width: 100%;
+        margin: auto;
+    }
+
+    #competences-section{
+        width: 100%;
+    }
+
+    .logos {
+        flex-direction: column;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    #experiences-section {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+
+    .experiences-boxs {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .experience {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .year {
+        text-align: center;
+    }
+
+    .work {
+        text-align: center;
+    }
+
+    #scholarship-section {
+        width: 100%;
+        margin: auto;
+        align-items: center;
+    }
+
+    .scholarship-boxs {
+        width: 100%;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+    }
+
+    .scholarship {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0;
+        padding: 0;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .school {
+        text-align: center;
+    }
+
+    .scholarship p {
+        text-align: center;
+    }
+
+    #projets {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-top: 2rem;
+    }
+
+    .title-projet h3 {
+        font-size: 2rem;
     }
 
     .projet-text h4 {
@@ -1147,8 +1317,77 @@ footer {
         font-size: 0.8rem;
     }
 
+    .projets-boxs {
+        gap: 3rem;
+        padding: 0 1rem;
+    }
+
     .projet {
-        margin-bottom: 1rem;
+        width: 100%;
+    }
+
+
+    #offre {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 2rem;
+    }
+
+    .title-offre h3 {
+        font-size: 2rem;
+    }
+
+    .text-offre p {
+        font-size: 1rem;
+    }
+
+    .offre-boxs {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 0 2rem;
+
+    }
+
+    .offre {
+        width: 100%;
+    }
+
+    .btn-rdv {
+        text-align: center;
+    }
+
+    #contact {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .title-contact h3 {
+        font-size: 2rem;
+    }
+
+    .contact-content {
+        width: 100%;
+        flex-direction: column;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .contact-request {
+        width: 100%;
+    }
+
+    .contact-right-part {
+        width: 100%;
+    }
+
+    #footer {
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     .footer-content p {

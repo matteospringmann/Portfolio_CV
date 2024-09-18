@@ -43,23 +43,23 @@ gsap.from('#competences-section .skill', {
 });
 
 // Animation des projets
-gsap.utils.toArray('#projets .projet').forEach(projet => {
-  gsap.from(projet, {
-    opacity: 0,
-    y: 50,
-    duration: 1,
-    scrollTrigger: {
-      trigger: projet,
-      start: 'top bottom',
-      end: 'bottom top',
-      toggleActions: 'play none none reset',
-      onEnter: () => gsap.to(projet, {opacity: 1, y: 0, duration: 1}),
-      onLeave: () => gsap.to(projet, {opacity: 0, y: 50, duration: 1}),
-      onEnterBack: () => gsap.to(projet, {opacity: 1, y: 0, duration: 1}),
-      onLeaveBack: () => gsap.to(projet, {opacity: 0, y: 50, duration: 1}),
-    }
-  });
-});
+// gsap.utils.toArray('#projets .projet').forEach(projet => {
+//   gsap.fromTo(projet, 
+//     {opacity: 0, y: 50},
+//     {
+//       opacity: 1, 
+//       y: 0, 
+//       duration: 1,
+//       scrollTrigger: {
+//         trigger: projet,
+//         start: 'top bottom-=100',
+//         end: 'bottom top+=100',
+//         toggleActions: 'play none none none',
+//         onEnter: () => projet.classList.add('projet-visible')
+//       }
+//     }
+//   );
+// });
 
 // Animation de la section offre
 gsap.from('#offre .offre', {
